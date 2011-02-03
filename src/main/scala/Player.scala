@@ -33,6 +33,6 @@ class Player(val dict: Dictionary, val noOfPlayers: Int) {
     else responses(Random.nextInt(responses length))
   }
 
-  private def bluff(str: String, completions: Seq[String]) = Append('x')
+  private def bluff(str: String, completions: Seq[String]) = Append('a')
 
 }
