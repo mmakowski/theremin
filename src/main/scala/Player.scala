@@ -18,11 +18,10 @@ class Player(val dict: Dictionary, val noOfPlayers: Int) {
     }
 
   private def extend(str: String, completions: Seq[String]) = 
-    if (str.length < 3) extendRandomly(str, completions)
-    else Append('u')
+    extendRandomly(str, completions)
 
   private def extendRandomly(str: String, completions: Seq[String]) = {
-    val letters = 'a' to 'z' // TODO: i18
+    val letters = 'a' to 'z' // TODO: i18n
     def genResponses(combined: (Char, String) => String, resp: (Char) => Response) = 
       for (l <- letters 
 	   if !(completions contains combined(l, str)) && 
@@ -30,6 +29,10 @@ class Player(val dict: Dictionary, val noOfPlayers: Int) {
     val prepends = genResponses((l, s) => l + s, Prepend(_))
     val appends = genResponses((l, s) => s + l, Append(_))
     val responses = prepends ++ appends
-    responses(Random.nextInt(responses length))
+    if (responses.isEmpty) bluff(str, completions)
+    else responses(Random.nextInt(responses length))
   }
+
+  private def bluff(str: String, completions: Seq[String]) = Append('x')
+
 }

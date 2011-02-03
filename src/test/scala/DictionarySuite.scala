@@ -16,4 +16,12 @@ class DictionarySuite extends FunSuite {
   test("all words containing given string are returned") {
     assert(dict.wordsContaining("ORD") === List("extraordinary", "password", "word"))
   }
+
+  test("can be built from an io source") {
+    val source = io.Source.fromInputStream(getClass.getClassLoader.getResourceAsStream("dictionary.txt"))
+    val dict = new Dictionary(source)
+    for (word <- source.mkString.split("\r\n") if word.length > 0) 
+      assert(dict.isWord(word), word + " is in dictionary")
+    assert(!dict.isWord("notaword"))
+  }
 }
