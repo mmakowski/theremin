@@ -5,6 +5,6 @@ class ThereminProject(info: ProjectInfo) extends DefaultProject(info) {
   val scalaToolsReleases = ScalaToolsReleases
 
   // dependencies
-  val scalatest = "org.scalatest" % "scalatest" % "1.2"
+  val scalatest = "org.scalatest" % "scalatest" % "1.2" % "test"
 }
 
