@@ -40,12 +40,15 @@ You will need scala 2.8.1 (might work with later versions as well) to
 run Theremin. Increase the heap size by setting `JAVA_OPTS`
 environment variable, e.g. `JAVA_OPTS="-Xmx1g"`, run `scala -cp
 theremin_<version>.jar com.mmakowski.theremin.ThereminApp`, then
-follow instructions. The dictionaries currently provided with are:
+follow instructions. The dictionaries currently provided with
+Thereming are:
 
 * `sjp` -- Polish 
 * `sowpods` -- English
 
-New dictionaries
+New dictionaries can be added by placing a file `<dictionary
+name>.txt` containing the list of words delimited by CR LF in the
+classpath.
 
 Sample game
 -----------
