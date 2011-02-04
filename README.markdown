@@ -20,6 +20,19 @@ the second case a ditionary is consulted and if the challenge is
 succesful then the challenged player loses, otherwise the challenging
 player loses.
 
+Building
+--------
+
+Make sure you have [SBT](http://code.google.com/p/simple-build-tool/)
+set up on your system. Then run:
+
+    >git clone git://github.com/mmakowski/theremin.git
+    >cd theremin
+    >sbt package
+
+After that completes you should end up with a directory
+`theremin/target/scala_<version>` containing `theremin_<version>.jar`.
+
 Usage
 -----
 
@@ -27,10 +40,12 @@ You will need scala 2.8.1 (might work with later versions as well) to
 run Theremin. Increase the heap size by setting `JAVA_OPTS`
 environment variable, e.g. `JAVA_OPTS="-Xmx1g"`, run `scala -cp
 theremin_<version>.jar com.mmakowski.theremin.ThereminApp`, then
-follow instructions. The dictionaries available currently are:
+follow instructions. The dictionaries currently provided with are:
 
 * `sjp` -- Polish 
 * `sowpods` -- English
+
+New dictionaries
 
 Sample game
 -----------
