@@ -2,7 +2,7 @@ package com.mmakowski.theremin
 
 import scala.util.Random
 
-sealed class Response
+sealed abstract class Response
 case class Append(letter: Char) extends Response
 case class Prepend(letter: Char) extends Response
 case object CompleteWordChallenge extends Response
