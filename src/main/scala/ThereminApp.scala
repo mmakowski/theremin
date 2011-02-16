@@ -27,9 +27,9 @@ object ThereminApp {
       case CompleteWordChallenge => if (dict.isWord(str)) Console.write(str.toLowerCase + " is a word -- you've won!\n") 
 				    else Console.write(str.toLowerCase + " is not a word -- you've lost!\n")
       case NoCompletionChallenge => {
-	val completions = dict.wordsContaining(str)
-	if (completions isEmpty) Console.write("there are no completions for " + str.toLowerCase + " -- you've won!\n")
-	else Console.write("sample completion: " + completions(Random.nextInt(completions.length)) + " -- you've lost!\n")
+        val completions = dict.wordsContaining(str)
+        if (completions isEmpty) Console.write("there are no completions for " + str.toLowerCase + " -- you've won!\n")
+        else Console.write("sample completion: " + completions(Random.nextInt(completions.length)) + " -- you've lost!\n")
       }
     }
   }
