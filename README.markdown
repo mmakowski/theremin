@@ -1,14 +1,14 @@
 Theremin
 ========
 
-Theremin is an implementation of a word game invented (to the best of
-my knowledge) by Eryk Kopczyński. There can be any number of players,
-although Theremin currently only supports two, one human and one
-computer. One of the player starts by providing a letter. Then the
-players take turns to prepend or append a letter to the sequence in
-such a way that it is possible to extend the sequence to a valid
-word. During his turn the player can also challenge the previous
-player by saying that either 
+Theremin is an implementation of a word game I learned from Eryk 
+Kopczyński. There can be any number of players, although Theremin 
+currently only supports two, one human and one computer. One of the 
+player starts by providing a letter. Then the players take turns 
+to prepend or append a letter to the sequence in such a way that it 
+is possible to extend the sequence to a valid word. During his or her 
+turn the player can also challenge the previous player by saying that 
+either 
 
 1. the sequence cannot be extended to a valid word, or
 2. the sequence is a valid word
